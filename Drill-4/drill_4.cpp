@@ -81,6 +81,9 @@ int main()
 		cout << "Enter a unit ( cm, in, ft, m )" << endl;
 		cin >> unit;
 
+		if (cin.fail())
+			break;
+
 		double inMeters;
 
 		if (unit == "cm")
@@ -110,19 +113,19 @@ int main()
 			continue;
 		}
 
-		if (input < smallest)
+		if (inMeters < smallest)
 		{
-			smallest = input;
+			smallest = inMeters;
 		}
-		if (input > largest)
+		if (inMeters > largest)
 		{
-			largest = input;
+			largest = inMeters;
 		}
 
 		values.push_back(inMeters);
 
 	}
-	cout << "Smallest value: " << smallest << "\nLargest value: " << largest << "\nNumber of values: " << values.size() << "\nSum: " << sum << endl;
+	cout << "Smallest value: " << smallest << " (m)\nLargest value: " << largest << " (m)\nNumber of values: " << values.size() << "\nSum: " << sum << endl;
 
 	sort(values.begin(), values.end());
 
