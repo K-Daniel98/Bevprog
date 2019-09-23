@@ -122,7 +122,7 @@ int main()
 		values.push_back(inMeters);
 
 	}
-	cout << "Smallest value: " << smallest << "\nLargest value: " << largest << "\nNumber of values: " << values.size() << endl;
+	cout << "Smallest value: " << smallest << "\nLargest value: " << largest << "\nNumber of values: " << values.size() << "\nSum: " << sum << endl;
 
 	sort(values.begin(), values.end());
 
@@ -132,6 +132,7 @@ int main()
 	{
 		cout << values.at(i);
 		if (i != values.size() - 1)
-			cout << "\n";
+			cout << " ";
 	}
+	cout << "\n";
 }
