@@ -38,7 +38,6 @@ int main()
     vector<double>::iterator PRIterator;
     vector<double>::iterator PRvIterator = PRv.begin();
 
-    int i,j;
     for(;;)
     {
         for(PRIterator = PR.begin();PRIterator < PR.end();PRIterator++)
