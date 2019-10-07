@@ -25,7 +25,7 @@ double tavolsag(vector<double> PR,vector<double> PRv, int n)
 
 int main()
 {
-    double L[4][4] = {
+    vector<vector<double>> L {
         {0.0,0.0,1.0 / 3.0, 0.0},
         {1.0,1.0 / 2.0, 1.0 / 3.0, 1.0},
         {0.0,1.0 / 2.0,0.0,0.0},
