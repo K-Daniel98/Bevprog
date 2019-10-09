@@ -5,16 +5,14 @@
 
 using namespace std;
 
-void kiir(vector<double>::iterator begin,vector<double>::iterator end)
+void kiir(vector<double> & vektor)
 {
-    while(begin < end)
-    {
-        cout << *begin << endl;
-        begin++;
-    }
+    vector<double>::iterator vektorIt;
+    for(vektorIt = vektor.begin();vektorIt < vektor.end(); vektorIt++)
+        cout << *vektorIt << endl;
 }
 
-double tavolsag(vector<double> PR,vector<double> PRv)
+double tavolsag(vector<double> & PR,vector<double> & PRv)
 {
     double osszeg = 0;
     vector<double>::iterator PRIterator = PR.begin();
@@ -39,15 +37,9 @@ int main()
 
     vector<double>::iterator PRIterator;
     vector<double>::iterator PRvIterator;
-    int i,j;
+
     for(;;)
     {
-        for(i = 0;i<4;i++)
-        {
-            PR[i] = 0.0;
-            for(j = 0;j<4;j++)
-                PR[i] += (L[i][j] * PRv[j]);
-        }
         for(PRIterator = PR.begin(); PRIterator < PR.end();PRIterator++)
         {
             *PRIterator = 0.0;
@@ -63,6 +55,6 @@ int main()
             *PRvIterator = *PRIterator;
         }
     }
-    kiir(PR.begin(),PR.end());
+    kiir(PR);
     return 0;
 }
