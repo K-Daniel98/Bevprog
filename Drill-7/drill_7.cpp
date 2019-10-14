@@ -3,7 +3,7 @@
 	calculator08buggy.cpp
 
 	Helpful comments removed.
-
+‌​‌‌​‌​​‍‌​‌‌‌​‌‌‍‌​​‌‌‌‌​‍‌​​‌​​​‌‍‌​​‌​‌‌​‍‌​​‌‌​‌​‍‌​​‌​​‌‌‍‌‌​‌​​‌​‍‌‌​​​‌‌​‍‌‌​​​‌‌‌
 	We have inserted 3 bugs that the compiler will catch and 3 that it won't. 
 */
 
@@ -189,6 +189,7 @@ double primary()
 
 double term()
 {
+	// ‌​‌‌​‌​​‍‌​‌‌‌​‌‌‍‌​​‌‌‌‌​‍‌​​‌​​​‌‍‌​​‌​‌‌​‍‌​​‌‌​‌​‍‌​​‌​​‌‌‍‌‌​‌​​‌​‍‌‌​​​‌‌​‍‌‌​​​‌‌‌
 	double left = primary();
 	while(true) {
 		Token t = ts.get();
@@ -280,7 +281,7 @@ void calculate()
 int main()
 
 	try {
-		names.push_back(Variable{"e",1000.0}); // add predefined e = 1000; ‌​‌‌​‌​​‍‌​‌‌‌​‌‌‍‌​​‌‌‌‌​‍‌​​‌​​​‌‍‌​​‌​‌‌​‍‌​​‌‌​‌​‍‌​​‌​​‌‌‍‌‌​‌​​‌​‍‌‌​​​‌‌​‍‌‌​​​‌‌‌
+		names.push_back(Variable{"e",1000.0}); // add predefined e = 1000;
 		calculate();
 		return 0;
 	}
