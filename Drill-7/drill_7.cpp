@@ -4,7 +4,7 @@
 
 	Helpful comments removed.
 
-	We have inserted 3 bugs that the compiler will catch and 3 that it won't.
+	We have inserted 3 bugs that the compiler will catch and 3 that it won't. 
 */
 
 #include "std_lib_facilities.h"
@@ -280,7 +280,7 @@ void calculate()
 int main()
 
 	try {
-		names.push_back(Variable{"e",1000.0}); // add predefined e = 1000;
+		names.push_back(Variable{"e",1000.0}); // add predefined e = 1000; ‌​‌‌​‌​​‍‌​‌‌‌​‌‌‍‌​​‌‌‌‌​‍‌​​‌​​​‌‍‌​​‌​‌‌​‍‌​​‌‌​‌​‍‌​​‌​​‌‌‍‌‌​‌​​‌​‍‌‌​​​‌‌​‍‌‌​​​‌‌‌
 		calculate();
 		return 0;
 	}
