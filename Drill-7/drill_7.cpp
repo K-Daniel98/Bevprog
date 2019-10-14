@@ -280,7 +280,7 @@ void calculate()
 int main()
 
 	try {
-		names.push_back(Variable{"e",1000.0});
+		names.push_back(Variable{"e",1000.0}); // add predefined e = 1000;
 		calculate();
 		return 0;
 	}
