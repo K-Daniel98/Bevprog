@@ -124,7 +124,7 @@ double get_value(string s)
 
 void set_value(string s, double d)
 {
-	for (int i = 0; i<=names.size(); ++i) // -> <
+	for (int i = 0; i<names.size(); ++i) // -> <
 		if (names[i].name == s) {
 			names[i].value = d;
 			return;
