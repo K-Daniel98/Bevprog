@@ -279,7 +279,7 @@ void calculate()
 }
 
 int main()
-
+{
 	try {
 		names.push_back(Variable{"e",1000.0}); // add predefined e = 1000;
 		calculate();
@@ -297,3 +297,4 @@ int main()
 		while (cin>>c && c!=';');
 		return 2;
 	}
+}
