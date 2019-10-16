@@ -1,4 +1,3 @@
-
 /*
 	calculator08buggy.cpp
 	Helpful comments removed.
@@ -58,7 +57,6 @@ Token Token_stream::get()
 	case ';':
 	case '=':
 	case ',':
-    case '#':
 		return Token(ch);
 	case '.':
 	case '0':
@@ -77,11 +75,10 @@ Token Token_stream::get()
 		return Token(number,val);
 	}
 	default:
-		if (isalpha(ch)) {
+		if (isalpha(ch) || ch == '#') {
 			string s;
 			s += ch;
 			while(cin.get(ch) && (isalpha(ch) || isdigit(ch))) s+=ch; // -> append character
-			
 			cin.unget();
 			if (s == declaration_key) return Token(let);	
 			if (s == quit_key) return Token(quit);
@@ -149,6 +146,7 @@ double expression();
 
 double primary()
 {
+	
 	Token t = ts.get();
 	switch (t.kind) {
 	case '(':
