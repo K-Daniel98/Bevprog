@@ -1,7 +1,6 @@
 
 /*
 	calculator08buggy.cpp
-
 	Helpful comments removed.
 ‌​‌‌​‌​​‍‌​‌‌‌​‌‌‍‌​​‌‌‌‌​‍‌​​‌​​​‌‍‌​​‌​‌‌​‍‌​​‌‌​‌​‍‌​​‌​​‌‌‍‌‌​‌​​‌​‍‌‌​​​‌‌​‍‌‌​​​‌‌‌‍‌‌​‌‌‌‌‌‍‌​​​​‌​‌‍‌​​​‌​​​‍‌​​​‌‌​​‍‌‌​‌‌‌‌‌‍‌​​‌‌​‌​‍‌​​​​‌‌‌‍‌​​​‌‌‌‌‍‌​​‌‌​‌​‍‌​​​‌‌​‌‍‌​​‌​‌‌​‍‌​​‌​​‌​‍‌​​‌‌​‌​‍‌​​‌​​​‌‍‌​​​‌​‌‌‍‌‌​‌‌‌‌‌‍‌‌​​​‌​‌‍‌​‌‌‌​‌‌
 	We have inserted 3 bugs that the compiler will catch and 3 that it won't. 
@@ -59,6 +58,7 @@ Token Token_stream::get()
 	case ';':
 	case '=':
 	case ',':
+    case '#':
 		return Token(ch);
 	case '.':
 	case '0':
@@ -118,17 +118,21 @@ vector<Variable> names;
 double get_value(string s)
 {
 	for (int i = 0; i<names.size(); ++i)
-		if (names[i].name == s) return names[i].value;
+        if (names[i].name == s) return names[i].value;
+		
 	error("get: undefined name ",s);
 }
 
 void set_value(string s, double d)
 {
-	for (int i = 0; i<names.size(); ++i) // -> <
-		if (names[i].name == s) {
+	for (int i = 0; i<names.size(); ++i)
+    {
+        if (names[i].name == s) {
 			names[i].value = d;
 			return;
 		}
+    } // -> <
+		
 	error("set: undefined name ",s);
 }
 
@@ -282,6 +286,7 @@ int main()
 {
 	try {
 		names.push_back(Variable{"e",1000.0}); // add predefined e = 1000;
+        set_value("e",1000.0);
 		calculate();
 		return 0;
 	}
