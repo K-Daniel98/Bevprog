@@ -5,7 +5,7 @@ using namespace std;
 
 int pow(int a,int b)
 {
-    return a^b;
+    
 }
 void print_array(ostream & os, int * a, int n)
 {
