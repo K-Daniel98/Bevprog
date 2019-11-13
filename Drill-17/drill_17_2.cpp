@@ -1,12 +1,8 @@
-#include <iostream>
-#include <vector>
+ 
+#include "std_lib_facilities.h"
 
 using namespace std;
 
-int pow(int a,int b)
-{
-    
-}
 void print_array(ostream & os, int * a, int n)
 {
     os << "Values in the array: " << endl;
